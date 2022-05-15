@@ -40,10 +40,10 @@ function App() {
       </nav>
       <div className="py-10 flex justify-between">
         <h3 className="stays-label font-bold">Stays in Finland</h3>
-        <div className="stays">{stays.length}+ stays</div>
+        <div className="stays">{stays.length} stays</div>
       </div>
       {/* <div className="bg-black opacity-20 fixed inset-0 z-50"></div> */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5 sm:gap-10">
         {allStays.map((stays) => {
           return (
             <Card

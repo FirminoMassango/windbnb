@@ -1,17 +1,43 @@
-import logo from "../assets/logo.svg";
+import star from "../assets/star.svg";
 
-export function Card() {
-  return (
-    <div className="rounded overflow-hidden shadow-lg">
-      <img className="w-full" src={logo} alt="Mountain" />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">Mountain</div>
-        <p className="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-          quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium
-          nihil.
-        </p>
+export function Card(props) {
+  return props.superHost ? (
+    <div className="rounded-xl">
+      <img
+        className="w-full rounded-xl h-48"
+        src={props.photo}
+        alt="Mountain"
+      />
+      <div className="flex justify-between text-xs py-5">
+        <div>
+          <span className="text-gray-700 font-semibold border border-gray-600 rounded-2xl px-2 py-1 mr-2">
+            SUPER HOST
+          </span>
+          <span className="text-gray-600 mr-2">{props.type}.</span>
+          <span className="text-gray-600">{props.beds} beds</span>
+        </div>
+        <div className="flex justify-content content-center">
+          <img className="mr-1" src={star} alt="" width={14} height={14} />
+          <span className="text-gray-700">{props.rating}</span>
+        </div>
       </div>
+      <p className="text-base font-semibold text-gray-700">{props.title}</p>
+    </div>
+  ) : (
+    <div className="rounded-xl">
+      <img
+        className="w-full rounded-xl h-48"
+        src={props.photo}
+        alt="Mountain"
+      />
+      <div className="flex justify-between text-xs py-5">
+        <div>
+          <span className="text-gray-600 mr-2">{props.type}.</span>
+          <span className="text-gray-600">{props.beds} beds</span>
+        </div>
+        <span className="text-gray-700">{props.rating}</span>
+      </div>
+      <p className="text-base font-semibold text-gray-700">{props.title}</p>
     </div>
   );
 }

@@ -1,52 +1,67 @@
 import { useState, useEffect } from "react";
 import logo from "./assets/logo.svg";
 import { Card } from "./components/Card";
-// import stays from "./store/stays.json";
+import allStays from "./store/stays.json";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [stays, setStays] = useState(allStays);
 
-  var stays = 0;
+  // useEffect(setStays(stay));
 
-  fetch("./src/store/stays.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      stays = data;
-    });
+  console.log(allStays.filter((stay) => stay.city === "Helsinki"));
+  // console.log(
+  //   stays.map(
+  //     ({ title, rating, type, superHost }) => title,
+  //     rating,
+  //     type,
+  //     superHost
+  //   )
+  // );
+  // console.log();
 
   return (
-    <div className="mx-20">
+    <div className="mx-5 md:mx-20">
       <nav className="navbar py-5 flex flex-col sm:flex-row justify-between">
         <img className="" src={logo} alt="windbnb-logo" />
-        <div className="input">
-          <button className="bg-white py-5 px-5 rounded-tl-xl rounded-bl-xl shadow-xl shadow-gray-100">
+        <div className="pt-5 md:pt-0 flex flex-row drop-shadow">
+          <button className="bg-white py-5 px-5 rounded-tl-xl rounded-bl-xl">
             Helsinki, Finland
           </button>
-          <button className="text-gray-400 py-5 px-5 border-x shadow-xl shadow-gray-50">
+          <button className="bg-white border-x text-gray-400 py-5 px-5">
             Add guests
           </button>
-          <button className="bg-white py-5 px-5 rounded-tr-xl rounded-br-xl shadow-xl shadow-gray-100">
-            Search
+          <button className="bg-white py-5 px-5 rounded-tr-xl rounded-br-xl">
+            <span className="material-icons text-red-500 md-48 text-justify">
+              search
+            </span>
           </button>
         </div>
       </nav>
       <div className="py-10 flex justify-between">
         <h3 className="stays-label font-bold">Stays in Finland</h3>
-        <div className="stays">12+ stays</div>
+        <div className="stays">{stays.length}+ stays</div>
       </div>
       {/* <div className="bg-black opacity-20 fixed inset-0 z-50"></div> */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5">
+        {allStays.map((stays) => {
+          return (
+            <Card
+              photo={stays.photo}
+              superHost={stays.superHost}
+              type={stays.type}
+              beds={stays.beds}
+              rating={stays.rating}
+              title={stays.title}
+            />
+          );
+        })}
       </div>
-      <span className="mx-50">
-        created by <span>Firmino Massango</span> - devChallenges.io
-      </span>
+      <div className="mt-20">
+        <span>
+          created by <span>Firmino Massango</span> - devChallenges.io
+        </span>
+      </div>
     </div>
   );
 }

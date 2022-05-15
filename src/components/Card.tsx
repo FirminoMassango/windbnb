@@ -1,14 +1,13 @@
 import star from "../assets/star.svg";
 
 interface Stay {
-  city: string;
-  country: string;
+  // city: string;
+  // country: string;
   superHost: boolean;
   title: string;
-  rating: string;
-  maxGuests: number;
+  rating: number;
   type: string;
-  beds: number;
+  beds: number | null;
   photo: string;
 }
 

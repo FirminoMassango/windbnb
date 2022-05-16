@@ -1,12 +1,17 @@
 import { useState, useEffect } from "react";
 import logo from "./assets/logo.svg";
 import { Card } from "./components/Card";
+import { Filter } from "./components/Filter";
 import allStays from "./store/stays.json";
 import "./App.css";
 
 function App() {
   const [stays, setStays] = useState(allStays);
+  const [isModalActive, activeModal] = useState(false);
 
+  function filter() {
+    activeModal(!isModalActive);
+  }
   // useEffect(setStays(stay));
 
   console.log(allStays.filter((stay) => stay.city === "Helsinki"));
@@ -21,17 +26,26 @@ function App() {
   // console.log();
 
   return (
-    <div className="mx-5 md:mx-20">
+    <div className="mx-5 md:mx-14">
       <nav className="navbar py-5 flex flex-col sm:flex-row justify-between">
         <img className="" src={logo} alt="windbnb-logo" />
         <div className="pt-5 md:pt-0 flex flex-row drop-shadow">
-          <button className="bg-white py-5 px-5 rounded-tl-xl rounded-bl-xl">
+          <button
+            className="bg-white h-14 px-5 rounded-tl-xl rounded-bl-xl"
+            onClick={filter}
+          >
             Helsinki, Finland
           </button>
-          <button className="bg-white border-x text-gray-400 py-5 px-5">
+          <button
+            className="bg-white h-14 border-x text-gray-400 py-5 px-5"
+            onClick={filter}
+          >
             Add guests
           </button>
-          <button className="bg-white py-5 px-5 rounded-tr-xl rounded-br-xl">
+          <button
+            className="bg-white h-14 px-5 rounded-tr-xl rounded-br-xl"
+            onClick={filter}
+          >
             <span className="material-icons text-red-500 md-48 text-justify">
               search
             </span>
@@ -42,8 +56,8 @@ function App() {
         <h3 className="stays-label font-bold">Stays in Finland</h3>
         <div className="stays">{stays.length} stays</div>
       </div>
-      {/* <div className="bg-black opacity-20 fixed inset-0 z-50"></div> */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5 sm:gap-10">
+      {isModalActive && <Filter />}
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5 sm:gap-10 content-center">
         {allStays.map((stays) => {
           return (
             <Card

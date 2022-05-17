@@ -86,8 +86,9 @@ function App() {
         })}
       </div>
       <div className="mt-20">
-        <span>
-          created by <span>Firmino Massango</span> - devChallenges.io
+        <span className="text-gray-500 text-xs text-center">
+          created by <span className="text-gray-700">Firmino Massango</span> -
+          devChallenges.io
         </span>
       </div>
     </div>

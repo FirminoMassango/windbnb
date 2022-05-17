@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="mx-5 md:mx-14">
       <header className="navbar py-5 flex flex-col sm:flex-row justify-between">
-        <img className="" src={logo} alt="windbnb-logo" />
+        <img className="w-24" src={logo} alt="windbnb-logo" />
         <div className="pt-5 md:pt-0 flex flex-row drop-shadow">
           <button
             className="bg-white h-14 px-5 text-xs md:text-base rounded-tl-xl rounded-bl-xl"
@@ -87,8 +87,14 @@ function App() {
       </div>
       <div className="mt-20">
         <span className="text-gray-500 text-xs text-center">
-          created by <span className="text-gray-700">Firmino Massango</span> -
-          devChallenges.io
+          created by{" "}
+          <a
+            className="text-blue-500 font-semibold"
+            href="https://github.com/FirminoMassango/windbnb"
+          >
+            Firmino Massango
+          </a>{" "}
+          - devChallenges.io
         </span>
       </div>
     </div>

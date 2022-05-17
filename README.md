@@ -49,7 +49,7 @@
 
 - You can see the demo at: https://windbnb-firme.vercel.app/
 - This is project built for educational propose, when I started coding this app I faced some problems such as difficulties while trying to manage global states in React Js, at the end every thing did work properly.
-- I learnt how to implement global states using react, using a wonderful li, called Zustend, instead of using the built in Context API.
+- I learnt how to implement global states using react, using a wonderful lib, called Zustend, instead of using the built in Context API.
 - I'm a web developer and Product designer. When it comes to javascript I do prefer Vue.js because everything looks easier. Currently learning React beacause it's a lib with a larger community, so corporations are often looking for a React developer.
 
 ## User Story

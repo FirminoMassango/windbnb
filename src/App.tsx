@@ -65,7 +65,7 @@ function App() {
         </div>
       </header>
       <div className="py-10 flex justify-between">
-        <h3 className="stays-label font-bold">Stays in Finland</h3>
+        <h3 className="stays-label text-gray-700 font-bold">Stays in Finland</h3>
         <div className="stays text-gray-500">{filteredStays.length} stays</div>
       </div>
       {/* Enabling the filter (popup/modal) when its status is true  */}

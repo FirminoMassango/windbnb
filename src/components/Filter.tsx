@@ -81,7 +81,7 @@ export function Filter() {
             </div>
           </div>
           {/* Button  */}
-          <div className="bg-white w-screen md:w-80 md:w-64 lg:w-96 h-16 border-l flex md:rounded-tr-xl md:rounded-br-xl items-center justify-center fixed top-80 md:static">
+          <div className="bg-white w-screen md:w-80 md:w-64 lg:w-96 h-24 md:h-16 border-l flex md:rounded-tr-xl md:rounded-br-xl items-center justify-center fixed top-80 md:static">
             <button
               className="bg-red-500 w-36 h-12  rounded-xl flex items-center justify-center"
               onClick={() =>
@@ -98,8 +98,8 @@ export function Filter() {
           </div>
         </div>
         {/* List of Locations  */}
-        <div className="mt-20 lg:mt-15 h-16 md:pt-0 flex flex-row justify-center items-center">
-          <div className="w-96">
+        <div className="h-16 md:pt-0 flex flex-row justify-center items-center">
+          <div className="w-96 mt-40 lg:mt-15">
             {isLocationFieldActive && (
               <ul className="w-56 mt-10 md:mt-0">
                 <li
@@ -142,7 +142,7 @@ export function Filter() {
             )}
           </div>
           {/* Add Guests  */}
-          <div className="bg-green-100 w-96 mt-56 md:mt-5 h-72 md:h-16 px-5">
+          <div className="w-96 mt-24 md:mt-16 h-16 md:h-16 px-5">
             {isGuestsFieldActive && (
               <div>
                 <div id="adults">

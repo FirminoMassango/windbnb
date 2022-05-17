@@ -24,14 +24,15 @@
 
 <!-- TABLE OF CONTENTS -->
 
-<!-- ## Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
   - [Built With](#built-with)
+-[User Story](#user-story)
 - [Features](#features)
 - [How to use](#how-to-use)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements) -->
+- [Acknowledgements](#acknowledgements)
 
 <!-- OVERVIEW -->
 

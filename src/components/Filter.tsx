@@ -2,25 +2,12 @@ import { useState } from "react";
 import { Stay } from "../helper/Stay";
 import useStayStore, { StayType } from "../stores";
 
-// interface Stay {
-//   // city: string;
-//   // country: string;
-//   superHost: boolean;
-//   title: string;
-//   rating: number;
-//   type: string;
-//   beds: number | null;
-//   photo: string;
-// }
-
-export function Filter(props: string) {
+export function Filter() {
   const [isLocationFieldActive, changeLocationStatus] = useState<boolean>(true);
   const [isGuestsFieldActive, changeGestStatus] = useState<boolean>(false);
   const [numberOfAdults, changeNumberOfAdults] = useState<number>(0);
   const [numberOfChildren, changeNumberOfChildren] = useState<number>(0);
-  const numberOfGuests = numberOfAdults + numberOfChildren;
   const [currentCity, setCurrenCity] = useState<string>("Helsinki");
-  const stayStandards = useStayStore((state) => state.stay);
   const addStay = useStayStore((state) => state.addStay);
 
   function changeStayData(data: StayType) {
@@ -28,8 +15,6 @@ export function Filter(props: string) {
   }
 
   const country: string = "Finland";
-
-  // props.stay.filter((stay) => stay.city === "Helsinki");
 
   function setLocationStatusToActive() {
     changeLocationStatus(true);
@@ -99,6 +84,7 @@ export function Filter(props: string) {
                 changeStayData({
                   city: currentCity,
                   maxGuests: numberOfAdults + numberOfChildren,
+                  isModalActive: false,
                 })
               }
             >

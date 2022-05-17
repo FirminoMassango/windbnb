@@ -43,19 +43,19 @@ function App() {
         <img className="" src={logo} alt="windbnb-logo" />
         <div className="pt-5 md:pt-0 flex flex-row drop-shadow">
           <button
-            className="bg-white h-14 px-5 rounded-tl-xl rounded-bl-xl"
+            className="bg-white h-14 px-5 text-xs md:text-base rounded-tl-xl rounded-bl-xl"
             onClick={enableFilter}
           >
             Helsinki, Finland
           </button>
           <button
-            className="bg-white h-14 border-x text-gray-400 py-5 px-5"
+            className="bg-white h-14 text-xs md:text-base border-x text-gray-400 py-5 px-5"
             onClick={enableFilter}
           >
             Add guests
           </button>
           <button
-            className="bg-white h-14 px-5 rounded-tr-xl rounded-br-xl"
+            className="bg-white h-14 text-xs md:text-base px-5 rounded-tr-xl rounded-br-xl"
             onClick={enableFilter}
           >
             <span className="material-icons text-red-500 md-48 text-justify">

@@ -48,7 +48,7 @@
 <!-- Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering: -->
 
 - You can see the demo at: https://windbnb-firme.vercel.app/
-- This is project built for educational propose, when I started coding this app I faced some problems such as difficulties while trying to manage global states in React Js, at the end every thing did work properly.
+- This is a project built for educational propose, when I started coding this app I faced some issues such as difficulties while trying to manage global states in React Js, at the end every thing did work properly.
 - I learnt how to implement global states using react, using a wonderful lib, called Zustand, instead of using the built in Context API.
 - I'm a web developer and Product designer. When it comes to javascript I do prefer Vue.js because everything looks easier. Currently learning React beacause it's a lib with a larger community, so corporations are often looking for a React developer.
 

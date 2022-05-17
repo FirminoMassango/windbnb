@@ -28,7 +28,7 @@
 
 - [Overview](#overview)
   - [Built With](#built-with)
--[User Story](#user-story)
+- [User Story](#user-story)
 - [Features](#features)
 - [How to use](#how-to-use)
 - [Contact](#contact)

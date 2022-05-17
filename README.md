@@ -37,9 +37,14 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+<!-- ![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png) -->
+<h1>Screenshots</h1>
+<img src="src/assets/screenshot1.png"/>
+<img src="src/assets/screenshot2.png"/>
+<img src="src/assets/screenshot3.png"/>
+<img src="src/assets/screenshot4.png"/>
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+<!-- Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering: -->
 
 - You can see the demo at: https://windbnb-firme.vercel.app/
 - This is project built for educational propose, when I started coding this app I faced some problems such as difficulties while trying to manage global states in React Js, at the end every thing did work properly.
